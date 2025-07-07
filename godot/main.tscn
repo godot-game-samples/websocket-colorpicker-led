@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://yl8j8mtecqn2"]
+
+[ext_resource type="Script" uid="uid://1anq27eu4cor" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://cq7nxnd8apmmq" path="res://control.gd" id="2_0xm2m"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_ig7tw")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_0xm2m")
+
+[node name="ColorPicker" type="ColorPicker" parent="Control"]
+layout_mode = 0
+offset_right = 335.0
+offset_bottom = 643.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 60.0
+offset_right = 625.0
+offset_bottom = 245.0
