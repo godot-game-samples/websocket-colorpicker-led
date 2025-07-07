@@ -14,6 +14,7 @@ offset_bottom = 40.0
 script = ExtResource("2_0xm2m")
 
 [node name="ColorPicker" type="ColorPicker" parent="Control"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_right = 335.0
 offset_bottom = 643.0
