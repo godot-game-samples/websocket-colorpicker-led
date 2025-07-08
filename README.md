@@ -1,6 +1,12 @@
 # Godot 4 & WebSocket ColorPicker LED
 
+Operate Godot 4's ColorPicker to control NeoPixel RGB LEDs connected via WebSocket.
+
 <img width="350" src="https://github.com/godot-game-samples/websocket-colorpicker-led/blob/main/assets/screenshot/screen.png">
+
+After launching the Godot application, start the WebSocket client and make a WebSocket connection.
+
+When you operate Godot's ColorPicker, it changes in real time.
 
 <img width="350" src="https://github.com/godot-game-samples/websocket-colorpicker-led/blob/main/assets/screenshot/led_1.png">
 
