@@ -37,7 +37,10 @@ def laser(strip, color, wait_ms=10):
 def colorWipe(strip, color):
     for i in range(strip.numPixels()):
         strip.setPixelColor(i, color)
-        strip.show()
+    strip.show()
+
+def colorOff():
+    colorWipe(strip, Color(0, 0, 0))
 
 def on_message(ws, message):
     if isinstance(message, bytes):
@@ -58,14 +61,11 @@ def on_open(ws):
 
 def on_error(ws, error):
     print("error:", error)
-    GPIO.cleanup()
+    colorOff()
 
 def on_close(ws, code, reason):
     print("end of connection")
-    if args.clear:
-        colorWipe(strip, Color(0, 0, 0), 10)
-    GPIO.cleanup()
-    print("GPIO cleaned up")
+    colorOff()
 
 laser(strip, Color(255, 255, 255))
 ws = websocket.WebSocketApp(SERVER_URI,
